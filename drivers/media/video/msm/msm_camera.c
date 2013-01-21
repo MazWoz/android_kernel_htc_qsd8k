@@ -2240,7 +2240,7 @@ static void msm_vfe_sync(struct msm_vfe_resp *vdata,
 			/* QDSP_VFETASK_MSG_VFE_START_ACK */
 #elif defined(CONFIG_ARCH_QSD8X50)
 			if (vdata->evt_msg.msg_id == 1)
-			/* VFE_MSG_ID_START_ACK */
+				/* VFE_MSG_ID_START_ACK */
 #endif
 			{
 				pr_info("flashlight: postpone_led_mode %d\n",
@@ -2473,7 +2473,7 @@ static int __msm_v4l2_control(struct msm_sync *sync,
 
 	ctrl = (struct msm_ctrl_cmd *)(rcmd->command);
 	/* FIXME: we should just set out->length = ctrl->length; */
-	BUG_ON(out->length < ctrl->length);
+	BUG_ON(out->length = ctrl->length);
 	memcpy(out->value, ctrl->value, ctrl->length);
 
 end:
